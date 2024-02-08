@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cream">#FDF9DE</color>
+    <color name="beige">#FDDFAE</color>
+    <color name="rose">#ED767A</color>
+    <color name="light_orange">#FE9607</color>
+    <color name="dark_orange">#FC6605</color>
+    <color name="light_blue">#8793A6</color>
+    <color name="dark_blue">#232C4B</color>
+    <color name="purple">#874A75</color>
+    <color name="turqose">#7BC0BB</color>
+
+
 </resources>
