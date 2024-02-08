@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StoryTour</string>
+    <string name="welcome_text">Welcome Traveller! How long of an adventure would you like to go on today?</string>
 </resources>
