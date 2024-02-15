@@ -17,6 +17,8 @@ class LocationActivity : AppCompatActivity(), GeneralContract.View {
 
         presenter = Presenter(this)
         presenter.loadImage()
+
+        binding.locationText.text = GeneralModel.location!!.description
     }
 
     override fun setBackground(imageResource: Int) {

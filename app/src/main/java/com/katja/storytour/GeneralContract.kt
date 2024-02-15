@@ -7,5 +7,9 @@ interface GeneralContract {
 
     interface Presenter {
         fun loadImage()
+
+        fun setupAdventure(length: Int)
+
+        fun setupLocation()
     }
 }
