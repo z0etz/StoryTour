@@ -8,7 +8,6 @@ import android.view.MenuItem
 import android.widget.SeekBar
 import androidx.appcompat.widget.Toolbar
 import com.katja.storytour.databinding.ActivityMainBinding
-import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity(), GeneralContract.View {
 
@@ -81,11 +80,11 @@ class MainActivity : AppCompatActivity(), GeneralContract.View {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_settings -> {
+            R.id.action_toggle_sound -> {
                 // Handle settings action
                 return true
             }
-            R.id.action_done -> {
+            R.id.action_toggle_music -> {
                 // Handle done action
                 return true
             }

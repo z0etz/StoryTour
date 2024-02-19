@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">StoryTour</string>
+    <string name="app_name">Story Tour</string>
     <string name="welcome_text">Welcome Traveller! How long of an adventure would you like to go on today?</string>
     <string name="minimum_time">30 minutes</string>
     <string name="location_text_not_found">Location text not found.</string>
+    <string name="start_adventure">Start adventure</string>
+    <string name="location_1">Location 1</string>
+    <string name="location_2">Location 2</string>
+    <string name="finish_adventure">Finish Adventure</string>
 </resources>

@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_toggle_sound"
         android:icon="@android:drawable/ic_lock_silent_mode"
         android:title="settings"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_done"
+        android:id="@+id/action_toggle_music"
         android:icon="@android:drawable/ic_lock_silent_mode_off"
         android:title="done"
         app:showAsAction="ifRoom|withText" />

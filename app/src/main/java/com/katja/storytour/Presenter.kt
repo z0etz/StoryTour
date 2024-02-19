@@ -17,7 +17,7 @@ class Presenter(private val view: GeneralContract.View) : GeneralContract.Presen
         setupLocation()
     }
 
-    override fun setupLocation() {
+    override fun setupLocation(storychoise: Storychoise?) {
         // Requested adventure time left in minutes
         val timeLeft = ((GeneralModel.adventureFinishTime - System.currentTimeMillis()) / 60000).toInt()
 

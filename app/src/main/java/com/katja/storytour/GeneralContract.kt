@@ -10,6 +10,6 @@ interface GeneralContract {
 
         fun setupAdventure(length: Int)
 
-        fun setupLocation()
+        fun setupLocation(storychoise: Storychoise? = null)
     }
 }

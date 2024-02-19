@@ -77,7 +77,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start adventure"
+            android:text="@string/start_adventure"
             android:backgroundTint="@color/light_orange"
             android:id="@+id/bStartAdventure"
             android:textSize="@dimen/text_large"
