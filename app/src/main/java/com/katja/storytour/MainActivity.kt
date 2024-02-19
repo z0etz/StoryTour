@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity(), GeneralContract.View {
             presenter.setupAdventure(seekbarMinutes)
             val intent = Intent(this, LocationActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

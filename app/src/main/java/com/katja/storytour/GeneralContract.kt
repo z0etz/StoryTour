@@ -11,5 +11,9 @@ interface GeneralContract {
         fun setupAdventure(length: Int)
 
         fun setupLocation(storychoise: Storychoise? = null)
+
+        fun endAdventure()
+
+        fun documentStoryline(text: String)
     }
 }

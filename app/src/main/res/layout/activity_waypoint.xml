@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WaypointActivity">
+    tools:context=".WaypointActivity"
+    android:id="@+id/layoutBackground">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -34,10 +35,10 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/waipoint_text"
+                android:id="@+id/waypoint_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/location_text_not_found"
+                android:text="@string/waypoint_text_not_found"
                 android:layout_gravity="center_horizontal"
                 android:padding="30dp" />
 
@@ -56,9 +57,14 @@
         android:orientation="horizontal"
         android:gravity="center">
 
-<!--        <TextView-->
-<!--            -->
-<!--            />-->
+        <TextView
+            android:id="@+id/meters_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unable_to_reed_gps"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
 
     </LinearLayout>
 

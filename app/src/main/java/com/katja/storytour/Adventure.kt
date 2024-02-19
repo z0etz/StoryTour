@@ -1,12 +1,12 @@
 package com.katja.storytour
 
 class Adventure {
-    val storyline = ""
+    var storyline = ""
 }
 
 class Location(
-    val waypoints: MutableList<Waypoint>,
-    val choices: MutableList<Storychoise>,
+    var waypoints: MutableList<Waypoint>,
+    var choices: MutableList<Storychoise>,
     var final: Boolean,
     var description: String
 )
