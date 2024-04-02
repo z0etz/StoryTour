@@ -26,7 +26,12 @@ class LocationActivity : AppCompatActivity(), GeneralContract.View {
         presenter = Presenter(this)
         presenter.loadImage()
 
-        binding.locationText.text = GeneralModel.location!!.description
+        binding.locationText.text = GeneralModel.location!!.description + " " +
+        GeneralModel.location!!.choices[0].description + " or " +
+                GeneralModel.location!!.choices[1].description.replaceFirstChar { it.lowercase() } + "?"
+
+        binding.bLocation1.text = GeneralModel.location!!.choices[0].name
+        binding.bLocation2.text = GeneralModel.location!!.choices[1].name
 
         binding.bLocation1.setOnClickListener {
             presenter.documentStoryline(GeneralModel.location!!.description)

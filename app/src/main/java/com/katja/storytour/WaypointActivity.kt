@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.Toolbar
 import com.katja.storytour.databinding.ActivityWaypointBinding
 
 class WaypointActivity : AppCompatActivity(), GeneralContract.View {
@@ -16,6 +17,16 @@ class WaypointActivity : AppCompatActivity(), GeneralContract.View {
         super.onCreate(savedInstanceState)
         binding = ActivityWaypointBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+    // Find the toolbar, set toolbar support
+    val toolbar: Toolbar = findViewById(R.id.toolbar)
+    setSupportActionBar(toolbar)
+
+    presenter = Presenter(this)
+    presenter.loadImage()
+
+    binding.waypointText.text = GeneralModel.location!!.waypoints[0].description
+
     }
 
     override fun setBackground(imageResource: Int) {

@@ -17,38 +17,56 @@ class Presenter(private val view: GeneralContract.View) : GeneralContract.Presen
         setupLocation()
     }
 
-    override fun setupLocation(storychoise: Storychoise?) {
+    override fun setupLocation(storyChoise: Storychoise?) {
         // Requested adventure time left in minutes
         val timeLeft = ((GeneralModel.adventureFinishTime - System.currentTimeMillis()) / 60000).toInt()
 
-//        val waypointsList: MutableList<Waypoint> = mutableListOf()
+    //        val waypointsList: MutableList<Waypoint> = mutableListOf()
 //        val choicesList: MutableList<Storychoise> = mutableListOf()
 //        var finalValue: Boolean = false
 
-        //Random number for getting test data
-        val randomNumber = (0 until TestDataModel.testLocations.size).random()
 
-        if (GeneralModel.adventure!!.storyline!!.isEmpty()) {
+        // For setup of test locations only
+        setupTestLocation(storyChoise, timeLeft)
+
+    }
+
+    fun setupTestLocation(storychoise: Storychoise?, timeLeft: Int) {
+
+        // Chosen location
+        var locationName = "Starting point"
+        if(storychoise != null) {
+            locationName = storychoise.name
+        }
+        var locationNumber = 0
+        when (locationName) {
+            "Music" -> locationNumber = 0
+            "Elephants" -> locationNumber = 1
+            "Gazebo" -> locationNumber = 2
+        }
+
+        if (GeneralModel.adventure!!.storyline.isEmpty()) {
             //Get location from test data
             GeneralModel.location = TestDataModel.testLocationFirst
         }
         else if (timeLeft < 10) {
             //Get location from test data
-            GeneralModel.location = TestDataModel.testLocations[randomNumber]
+            GeneralModel.location = TestDataModel.testLocations[locationNumber]
             GeneralModel.location!!.final = true
             GeneralModel.location!!.description += " Thank you for this adventure, hope to see you another time!"
         }
         else if (timeLeft < 20) {
             //Get location from test data
-            GeneralModel.location = TestDataModel.testLocations[randomNumber]
+            GeneralModel.location = TestDataModel.testLocations[locationNumber]
             GeneralModel.location!!.description += " What would you like to do next? We are running out of time, so choose wisely."
         }
         else {
             //Get location from test data
-            GeneralModel.location = TestDataModel.testLocations[randomNumber]
+            GeneralModel.location = TestDataModel.testLocations[locationNumber]
             GeneralModel.location!!.description += " What would you like to do next?"
         }
     }
+
 
     override fun endAdventure() {
         GeneralModel.adventureFinishTime = 0
@@ -57,7 +75,7 @@ class Presenter(private val view: GeneralContract.View) : GeneralContract.Presen
     }
 
     override fun documentStoryline(text: String) {
-        GeneralModel.adventure?.storyline += "text/n/n"
+        GeneralModel.adventure?.storyline += "$text\n\n"
     }
 
 

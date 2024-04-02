@@ -56,23 +56,27 @@
         android:gravity="center">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/location_1"
             android:backgroundTint="@color/light_orange"
             android:id="@+id/bLocation1"
             android:textSize="@dimen/text_large"
-            android:layout_margin="@dimen/_margin_xs"
+            android:layout_marginStart="@dimen/_margin_s"
+            android:layout_marginEnd="@dimen/_margin_xs"
             />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/location_2"
             android:backgroundTint="@color/light_orange"
             android:id="@+id/bLocation2"
             android:textSize="@dimen/text_large"
-            android:layout_margin="@dimen/_margin_xs"
+            android:layout_marginStart="@dimen/_margin_xs"
+            android:layout_marginEnd="@dimen/_margin_s"
             />
 
     </LinearLayout>
