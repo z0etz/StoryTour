@@ -68,8 +68,12 @@ class Presenter(private val view: GeneralContract.View) : GeneralContract.Presen
         }
     }
 
+    override fun changeWaypoint() {
+        GeneralModel.location!!.waypoints.removeAt(0)
+    }
 
-    fun calculateDistanceToWaypoint(context: Context, waypoint: Waypoint): Int {
+
+    override fun calculateDistanceToWaypoint(context: Context): Int {
         val currentLocation = PositionManager.getCurrentLocation(context)
         if (currentLocation != null) {
             return PositionManager.calculateDistance(currentLocation)

@@ -1,5 +1,7 @@
 package com.katja.storytour
 
+import android.content.Context
+
 interface GeneralContract {
     interface View {
         fun setBackground(imageResource: Int)
@@ -15,5 +17,8 @@ interface GeneralContract {
         fun endAdventure()
 
         fun documentStoryline(text: String)
+
+        fun changeWaypoint()
+        abstract fun calculateDistanceToWaypoint(context: Context): Int
     }
 }

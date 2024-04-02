@@ -67,6 +67,7 @@ object PositionManager : LocationListener {
             // Handle security exception
             ex.printStackTrace()
         }
+        println(currentLocation)
         return currentLocation
     }
 
@@ -74,6 +75,7 @@ object PositionManager : LocationListener {
         val destinationLocation = Location("Destination")
         destinationLocation.latitude = GeneralModel.location!!.waypoints[0].latitude
         destinationLocation.longitude = GeneralModel.location!!.waypoints[0].longitude
+        println(currentLocation.distanceTo(destinationLocation).roundToInt())
         return currentLocation.distanceTo(destinationLocation).roundToInt()
     }
 
