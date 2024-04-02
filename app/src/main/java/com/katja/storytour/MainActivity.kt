@@ -63,6 +63,10 @@ class MainActivity : AppCompatActivity(), GeneralContract.View {
                 // Not needed
             }
         })
+
+        // Initialize PositionManager
+        PositionManager.init(this)
+
         binding.bStartAdventure.setOnClickListener {
             presenter.setupAdventure(seekbarMinutes)
             val intent = Intent(this, LocationActivity::class.java)
@@ -92,6 +96,13 @@ class MainActivity : AppCompatActivity(), GeneralContract.View {
             else -> return super.onOptionsItemSelected(item)
         }
     }
+
+        override fun onDestroy() {
+            super.onDestroy()
+            // Remove location updates when activity is destroyed
+            PositionManager.removeLocationUpdates()
+        }
+
 
 
 }

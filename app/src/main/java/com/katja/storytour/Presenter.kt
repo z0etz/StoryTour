@@ -1,5 +1,6 @@
 package com.katja.storytour
 
+import android.content.Context
 import java.sql.Timestamp
 
 class Presenter(private val view: GeneralContract.View) : GeneralContract.Presenter {
@@ -67,6 +68,14 @@ class Presenter(private val view: GeneralContract.View) : GeneralContract.Presen
         }
     }
 
+
+    fun calculateDistanceToWaypoint(context: Context, waypoint: Waypoint): Int {
+        val currentLocation = PositionManager.getCurrentLocation(context)
+        if (currentLocation != null) {
+            return PositionManager.calculateDistance(currentLocation)
+        }
+        return -1 // Return a negative value if current location is not available
+    }
 
     override fun endAdventure() {
         GeneralModel.adventureFinishTime = 0
