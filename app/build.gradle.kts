@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.katja.storytour"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.katja.storytour"
@@ -15,6 +15,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
