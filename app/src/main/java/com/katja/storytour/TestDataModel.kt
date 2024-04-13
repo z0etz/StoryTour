@@ -10,7 +10,7 @@ object TestDataModel {
                 Waypoint(59.350130, 18.023028, "Follow Solnavägen southwest, to SciLifeLab")
             ),
             mutableListOf(
-                Storychoise(59.350130, 18.023028, "Gazebo","Have a look at a Gazebo"),
+                Storychoise(59.34965, 18.02752, "Gazebo","Have a look at a Gazebo"),
                 Storychoise(59.351031, 18.024640, "Elephants","See the elephants")
         ),
     false, "Litsen to the beautiful sound of the Metal Bells."
@@ -22,13 +22,13 @@ object TestDataModel {
             ),
             mutableListOf(
                 Storychoise(59.350130, 18.023028, "Music", "Litsen to bell music"),
-                Storychoise(59.350130, 18.023028, "Gazebo", "Have a look at a Gazebo")
+                Storychoise(59.34965, 18.02752, "Gazebo", "Have a look at a Gazebo")
             ),
             false, "Say hi to the some elephants."
         ),
         Location(
             mutableListOf(
-                Waypoint(59.349368, 18.027403, "Dance to the crossing between Solnavägen and Framtidsvägen."),
+                Waypoint(59.349368, 18.027403, "Dance to the crossing between Solnavägen and Framstegsgatan."),
                 Waypoint(59.350130, 18.023028, "Walk straight north")
             ),
             mutableListOf(

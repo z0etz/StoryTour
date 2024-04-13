@@ -35,6 +35,7 @@ class WaypointActivity : AppCompatActivity(), GeneralContract.View {
         binding.waypointText.text = GeneralModel.location!!.waypoints[0].description
 
         // Start updating distance periodically
+        PositionManager.requestLocationUpdates(this)
         UpdateDistance(this)
 
         //Calculate and display distance
@@ -97,6 +98,7 @@ class WaypointActivity : AppCompatActivity(), GeneralContract.View {
 
     fun nextWaypoint() {
         presenter.changeWaypoint()
+        PositionManager.removeLocationUpdates()
 
         if (!GeneralModel.location!!.waypoints.isEmpty()) {
             val intent = Intent(this, WaypointActivity::class.java)

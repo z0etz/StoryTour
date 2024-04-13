@@ -26,7 +26,7 @@ object PositionManager : LocationListener {
         requestLocationUpdates(context)
     }
 
-    private fun requestLocationUpdates(context: Context) {
+    fun requestLocationUpdates(context: Context) {
         if (ContextCompat.checkSelfPermission(
                 context,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -44,8 +44,8 @@ object PositionManager : LocationListener {
             // Permission already granted, request location updates
             locationManager?.requestLocationUpdates(
                 LocationManager.GPS_PROVIDER,
-                0,
-                0f,
+                1000,
+                1f,
                 this
             )
         }
