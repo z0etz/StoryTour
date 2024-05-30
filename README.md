@@ -22,17 +22,18 @@ This is how you make a list, if you need one:
 
 Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
 
-<img src="/Screenshot_01.png" width="300">
-<img src="/Screenshot_02.png" width="300">
+<img src="/Screenshots/Screenshot_01.png" width="300">
+<img src="/Screenshots/Screenshot_02.png" width="300">
 
-<img src="/Screenshot_03.png" width="300">
+<img src="/Screenshots/Screenshot_03.png" width="300">
 
 
 
 ## Data sources and AI methods
 Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
 
-[gpt4free](https://github.com/xtekky/gpt4free))
+[gpt4free](https://github.com/xtekky/gpt4free)
+
 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API_v0.6)
 
 | Syntax      | Description |
