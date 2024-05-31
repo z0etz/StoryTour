@@ -2,7 +2,7 @@
 
 I started Story Tour as my final Building AI course project and aim to keep developing it as I learn more about programming and AI. 
 
-As of June 1st 2024 the app is available as an Android prototype with pre-defined locations. If you ever find yourself near Biomedicum in Solna, Sweden, feel free to download the APK from this repository and try it out!
+As of June 1st 2024 the app is available as an Android prototype with pre-defined locations. If you ever find yourself near Biomedicum in Solna, Sweden, feel free to download [the APK from this repository](https://github.com/z0etz/StoryTour/tree/main/app/release) and try it out!
 
 
 ## Summary
